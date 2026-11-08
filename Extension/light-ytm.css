@@ -3694,14 +3694,14 @@ ytmusic-grid-renderer ytmusic-two-row-item-renderer yt-icon {
 }
 
 
-/* --- High-Visibility Song Action Icons in Playlists, Albums & Queue (Like, Dislike, Three-Dot Menu) --- */
+/* --- Balanced Visibility Song Action Icons in Playlists, Albums & Queue (Like, Dislike, Three-Dot Menu) --- */
 
 :root,
 html,
 body,
 ytmusic-app {
-    --ytmusic-icon-inactive: #0f0f0f !important;
-    --yt-spec-icon-inactive: #0f0f0f !important;
+    --ytmusic-icon-inactive: #606060 !important;
+    --yt-spec-icon-inactive: #606060 !important;
 }
 
 /* 1. Tracklist & Queue Row Action Buttons Container */
@@ -3765,7 +3765,7 @@ ytmusic-player-queue-item ytmusic-menu-renderer button:active {
     transform: scale(0.92) !important;
 }
 
-/* 3. Crisp High-Contrast Black Icons (#0f0f0f) */
+/* 3. Balanced Secondary Grey Icons (#606060, Softened Contrast) */
 ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer yt-icon,
 ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer tp-yt-iron-icon,
 ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer svg,
@@ -3803,6 +3803,32 @@ ytmusic-player-queue-item ytmusic-menu-renderer path,
 ytmusic-player-queue-item ytmusic-menu-renderer #button-shape yt-icon,
 ytmusic-player-queue-item ytmusic-menu-renderer #button-shape svg,
 ytmusic-player-queue-item ytmusic-menu-renderer #button-shape path {
+    color: #606060 !important;
+    fill: #606060 !important;
+    stroke: #606060 !important;
+    opacity: 0.8 !important;
+    transition: color 0.15s ease, fill 0.15s ease, stroke 0.15s ease, opacity 0.15s ease !important;
+}
+
+/* Hover State: Darken to Crisp Solid Black */
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer button:hover yt-icon,
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer button:hover svg,
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer button:hover path,
+ytmusic-responsive-list-item-renderer #button-shape-like button:hover yt-icon,
+ytmusic-responsive-list-item-renderer #button-shape-like button:hover svg,
+ytmusic-responsive-list-item-renderer #button-shape-like button:hover path,
+ytmusic-responsive-list-item-renderer #button-shape-dislike button:hover yt-icon,
+ytmusic-responsive-list-item-renderer #button-shape-dislike button:hover svg,
+ytmusic-responsive-list-item-renderer #button-shape-dislike button:hover path,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer button:hover yt-icon,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer button:hover svg,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer button:hover path,
+ytmusic-player-queue-item ytmusic-like-button-renderer button:hover yt-icon,
+ytmusic-player-queue-item ytmusic-like-button-renderer button:hover svg,
+ytmusic-player-queue-item ytmusic-like-button-renderer button:hover path,
+ytmusic-player-queue-item ytmusic-menu-renderer button:hover yt-icon,
+ytmusic-player-queue-item ytmusic-menu-renderer button:hover svg,
+ytmusic-player-queue-item ytmusic-menu-renderer button:hover path {
     color: #0f0f0f !important;
     fill: #0f0f0f !important;
     stroke: #0f0f0f !important;

@@ -3692,3 +3692,159 @@ ytmusic-item-section-renderer ytmusic-two-row-item-renderer yt-icon,
 ytmusic-grid-renderer ytmusic-two-row-item-renderer yt-icon {
     fill: #606060 !important;
 }
+
+
+/* --- High-Visibility Song Action Icons in Playlists, Albums & Queue (Like, Dislike, Three-Dot Menu) --- */
+
+:root,
+html,
+body,
+ytmusic-app {
+    --ytmusic-icon-inactive: #0f0f0f !important;
+    --yt-spec-icon-inactive: #0f0f0f !important;
+}
+
+/* 1. Tracklist & Queue Row Action Buttons Container */
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer,
+ytmusic-responsive-list-item-renderer #top-level-buttons,
+ytmusic-responsive-list-item-renderer #button-shape-like,
+ytmusic-responsive-list-item-renderer #button-shape-dislike,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer #button-shape,
+ytmusic-responsive-list-item-renderer .menu.ytmusic-responsive-list-item-renderer,
+ytmusic-player-queue-item ytmusic-like-button-renderer,
+ytmusic-player-queue-item ytmusic-menu-renderer,
+ytmusic-player-queue-item #top-level-buttons,
+ytmusic-player-queue-item #button-shape-like,
+ytmusic-player-queue-item #button-shape-dislike,
+ytmusic-player-queue-item ytmusic-menu-renderer #button-shape {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* 2. Transparent Button Shapes with Subtle Hover Pill */
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer button,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer button,
+ytmusic-responsive-list-item-renderer #button-shape-like button,
+ytmusic-responsive-list-item-renderer #button-shape-dislike button,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer #button-shape button,
+ytmusic-responsive-list-item-renderer .yt-spec-button-shape-next--icon-button,
+ytmusic-player-queue-item ytmusic-like-button-renderer button,
+ytmusic-player-queue-item ytmusic-menu-renderer button,
+ytmusic-player-queue-item #button-shape-like button,
+ytmusic-player-queue-item #button-shape-dislike button,
+ytmusic-player-queue-item ytmusic-menu-renderer #button-shape button {
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transition: background 0.15s ease, opacity 0.15s ease, transform 0.1s ease !important;
+}
+
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer button:hover,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer button:hover,
+ytmusic-responsive-list-item-renderer #button-shape-like button:hover,
+ytmusic-responsive-list-item-renderer #button-shape-dislike button:hover,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer #button-shape button:hover,
+ytmusic-responsive-list-item-renderer .yt-spec-button-shape-next--icon-button:hover,
+ytmusic-player-queue-item ytmusic-like-button-renderer button:hover,
+ytmusic-player-queue-item ytmusic-menu-renderer button:hover,
+ytmusic-player-queue-item #button-shape-like button:hover,
+ytmusic-player-queue-item #button-shape-dislike button:hover,
+ytmusic-player-queue-item ytmusic-menu-renderer #button-shape button:hover {
+    background: rgba(0, 0, 0, 0.06) !important;
+    border-radius: 50% !important;
+}
+
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer button:active,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer button:active,
+ytmusic-player-queue-item ytmusic-like-button-renderer button:active,
+ytmusic-player-queue-item ytmusic-menu-renderer button:active {
+    transform: scale(0.92) !important;
+}
+
+/* 3. Crisp High-Contrast Black Icons (#0f0f0f) */
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer yt-icon,
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer tp-yt-iron-icon,
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer svg,
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer path,
+ytmusic-responsive-list-item-renderer #button-shape-like yt-icon,
+ytmusic-responsive-list-item-renderer #button-shape-like svg,
+ytmusic-responsive-list-item-renderer #button-shape-like path,
+ytmusic-responsive-list-item-renderer #button-shape-dislike yt-icon,
+ytmusic-responsive-list-item-renderer #button-shape-dislike svg,
+ytmusic-responsive-list-item-renderer #button-shape-dislike path,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer yt-icon,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer tp-yt-iron-icon,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer svg,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer path,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer #button-shape yt-icon,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer #button-shape svg,
+ytmusic-responsive-list-item-renderer ytmusic-menu-renderer #button-shape path,
+ytmusic-responsive-list-item-renderer .yt-spec-button-shape-next__icon,
+ytmusic-responsive-list-item-renderer .yt-spec-button-shape-next__icon svg,
+ytmusic-responsive-list-item-renderer .yt-spec-button-shape-next__icon path,
+ytmusic-player-queue-item ytmusic-like-button-renderer yt-icon,
+ytmusic-player-queue-item ytmusic-like-button-renderer tp-yt-iron-icon,
+ytmusic-player-queue-item ytmusic-like-button-renderer svg,
+ytmusic-player-queue-item ytmusic-like-button-renderer path,
+ytmusic-player-queue-item #button-shape-like yt-icon,
+ytmusic-player-queue-item #button-shape-like svg,
+ytmusic-player-queue-item #button-shape-like path,
+ytmusic-player-queue-item #button-shape-dislike yt-icon,
+ytmusic-player-queue-item #button-shape-dislike svg,
+ytmusic-player-queue-item #button-shape-dislike path,
+ytmusic-player-queue-item ytmusic-menu-renderer yt-icon,
+ytmusic-player-queue-item ytmusic-menu-renderer tp-yt-iron-icon,
+ytmusic-player-queue-item ytmusic-menu-renderer svg,
+ytmusic-player-queue-item ytmusic-menu-renderer path,
+ytmusic-player-queue-item ytmusic-menu-renderer #button-shape yt-icon,
+ytmusic-player-queue-item ytmusic-menu-renderer #button-shape svg,
+ytmusic-player-queue-item ytmusic-menu-renderer #button-shape path {
+    color: #0f0f0f !important;
+    fill: #0f0f0f !important;
+    stroke: #0f0f0f !important;
+    opacity: 1 !important;
+}
+
+/* 4. Liked and Disliked Active States: Solid Black */
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer[like-status="LIKE"] #button-shape-like yt-icon,
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer[like-status="LIKE"] #button-shape-like svg,
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer[like-status="LIKE"] #button-shape-like path,
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer[like-status="LIKE"] tp-yt-iron-icon,
+ytmusic-responsive-list-item-renderer #button-shape-like[aria-pressed="true"] yt-icon,
+ytmusic-responsive-list-item-renderer #button-shape-like[aria-pressed="true"] svg,
+ytmusic-responsive-list-item-renderer #button-shape-like[aria-pressed="true"] path,
+ytmusic-player-queue-item ytmusic-like-button-renderer[like-status="LIKE"] #button-shape-like yt-icon,
+ytmusic-player-queue-item ytmusic-like-button-renderer[like-status="LIKE"] #button-shape-like svg,
+ytmusic-player-queue-item ytmusic-like-button-renderer[like-status="LIKE"] #button-shape-like path,
+ytmusic-player-queue-item #button-shape-like[aria-pressed="true"] yt-icon,
+ytmusic-player-queue-item #button-shape-like[aria-pressed="true"] svg,
+ytmusic-player-queue-item #button-shape-like[aria-pressed="true"] path {
+    color: #000000 !important;
+    fill: #000000 !important;
+    stroke: #000000 !important;
+    opacity: 1 !important;
+}
+
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer[like-status="DISLIKE"] #button-shape-dislike yt-icon,
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer[like-status="DISLIKE"] #button-shape-dislike svg,
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer[like-status="DISLIKE"] #button-shape-dislike path,
+ytmusic-responsive-list-item-renderer ytmusic-like-button-renderer[like-status="DISLIKE"] tp-yt-iron-icon,
+ytmusic-responsive-list-item-renderer #button-shape-dislike[aria-pressed="true"] yt-icon,
+ytmusic-responsive-list-item-renderer #button-shape-dislike[aria-pressed="true"] svg,
+ytmusic-responsive-list-item-renderer #button-shape-dislike[aria-pressed="true"] path,
+ytmusic-player-queue-item ytmusic-like-button-renderer[like-status="DISLIKE"] #button-shape-dislike yt-icon,
+ytmusic-player-queue-item ytmusic-like-button-renderer[like-status="DISLIKE"] #button-shape-dislike svg,
+ytmusic-player-queue-item ytmusic-like-button-renderer[like-status="DISLIKE"] #button-shape-dislike path,
+ytmusic-player-queue-item #button-shape-dislike[aria-pressed="true"] yt-icon,
+ytmusic-player-queue-item #button-shape-dislike[aria-pressed="true"] svg,
+ytmusic-player-queue-item #button-shape-dislike[aria-pressed="true"] path {
+    color: #000000 !important;
+    fill: #000000 !important;
+    stroke: #000000 !important;
+    opacity: 1 !important;
+}
+

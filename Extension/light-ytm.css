@@ -3874,3 +3874,59 @@ ytmusic-player-queue-item #button-shape-dislike[aria-pressed="true"] path {
     opacity: 1 !important;
 }
 
+
+
+/* --- Remove Purple and Creamy Dynamic Backgrounds on Playlist & Album Detail Pages --- */
+ytmusic-browse-response .background-gradient,
+ytmusic-browse-response div.background-gradient,
+.background-gradient.ytmusic-browse-response,
+ytmusic-browse-response #background,
+#background.ytmusic-browse-response,
+div#background.ytmusic-browse-response {
+    display: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+ytmusic-browse-response[is-playlist-detail-page],
+ytmusic-browse-response[is-album-detail-page],
+ytmusic-browse-response:has(ytmusic-responsive-header-renderer),
+ytmusic-browse-response:has(ytmusic-editable-playlist-detail-header-renderer),
+ytmusic-browse-response:has(ytmusic-detail-header-renderer),
+ytmusic-browse-response:has(ytmusic-playlist-shelf-renderer),
+ytmusic-browse-response:has(ytmusic-two-column-browse-results-renderer),
+ytmusic-browse-response[is-playlist-detail-page] #content-wrapper,
+ytmusic-browse-response[is-playlist-detail-page] #contents,
+ytmusic-browse-response[is-playlist-detail-page] ytmusic-section-list-renderer,
+ytmusic-browse-response[is-album-detail-page] #content-wrapper,
+ytmusic-browse-response[is-album-detail-page] #contents,
+ytmusic-browse-response[is-album-detail-page] ytmusic-section-list-renderer,
+ytmusic-browse-response:has(ytmusic-responsive-header-renderer) #content-wrapper,
+ytmusic-browse-response:has(ytmusic-responsive-header-renderer) #contents,
+ytmusic-browse-response:has(ytmusic-responsive-header-renderer) ytmusic-section-list-renderer,
+ytmusic-browse-response:has(ytmusic-editable-playlist-detail-header-renderer) #content-wrapper,
+ytmusic-browse-response:has(ytmusic-editable-playlist-detail-header-renderer) #contents,
+ytmusic-browse-response:has(ytmusic-editable-playlist-detail-header-renderer) ytmusic-section-list-renderer,
+ytmusic-browse-response:has(ytmusic-playlist-shelf-renderer) #content-wrapper,
+ytmusic-browse-response:has(ytmusic-playlist-shelf-renderer) #contents,
+ytmusic-browse-response:has(ytmusic-playlist-shelf-renderer) ytmusic-section-list-renderer,
+ytmusic-app-layout:has(ytmusic-responsive-header-renderer) #content.ytmusic-app-layout,
+ytmusic-app-layout:has(ytmusic-playlist-shelf-renderer) #content.ytmusic-app-layout,
+ytmusic-app-layout:has(ytmusic-editable-playlist-detail-header-renderer) #content.ytmusic-app-layout,
+ytmusic-app-layout:has(ytmusic-two-column-browse-results-renderer) #content.ytmusic-app-layout,
+ytmusic-two-column-browse-results-renderer,
+ytmusic-two-column-browse-results-renderer #primary,
+ytmusic-two-column-browse-results-renderer #secondary,
+ytmusic-responsive-header-renderer,
+ytmusic-responsive-header-renderer #header,
+ytmusic-editable-playlist-detail-header-renderer,
+ytmusic-editable-playlist-detail-header-renderer #header,
+ytmusic-detail-header-renderer,
+ytmusic-playlist-shelf-renderer {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+}

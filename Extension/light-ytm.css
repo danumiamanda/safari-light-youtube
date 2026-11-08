@@ -40,8 +40,8 @@
     --ytm-sidebar-bg: #f6f6f7;
     --ytm-search-bg: rgba(254, 246, 239, 0.88);
     --ytm-search-border: rgba(225, 208, 196, 0.7);
-    --ytm-chip-bg: rgba(246, 235, 226, 0.78);
-    --ytm-chip-border: rgba(228, 212, 202, 0.6);
+    --ytm-chip-bg: #f2f2f2;
+    --ytm-chip-border: #e0e0e0;
 }
 
 :root {
@@ -2532,34 +2532,53 @@ ytmusic-guide-entry-renderer yt-formatted-string.subtitle {
 ytmusic-chip-cloud-chip-renderer a.ytmusic-chip-cloud-chip-renderer,
 ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style] a.ytmusic-chip-cloud-chip-renderer,
 ytmusic-chip-cloud-chip-renderer[chip-style="STYLE_TRANSPARENT"] a.ytmusic-chip-cloud-chip-renderer,
-.yt-simple-endpoint.style-scope.ytmusic-chip-cloud-chip-renderer {
-    background: var(--ytm-chip-bg) !important;
-    background-color: var(--ytm-chip-bg) !important;
-    border: 1px solid var(--ytm-chip-border) !important;
+.yt-simple-endpoint.style-scope.ytmusic-chip-cloud-chip-renderer,
+ytmusic-chip-cloud-chip-renderer chip-shape,
+ytmusic-chip-cloud-chip-renderer chip-shape button,
+chip-shape.ytmusic-chip-cloud-chip-renderer {
+    background: #f2f2f2 !important;
+    background-color: #f2f2f2 !important;
+    background-image: none !important;
+    border: 1px solid #e0e0e0 !important;
     border-radius: 8px !important;
     color: var(--ytm-content) !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    font-weight: 500 !important;
     transition: all 0.15s ease !important;
 }
 
 ytmusic-chip-cloud-chip-renderer a.ytmusic-chip-cloud-chip-renderer:hover,
-ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style] a.ytmusic-chip-cloud-chip-renderer:hover {
-    background: rgba(238, 222, 210, 0.95) !important;
-    border-color: rgba(215, 195, 180, 0.8) !important;
+ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style] a.ytmusic-chip-cloud-chip-renderer:hover,
+ytmusic-chip-cloud-chip-renderer chip-shape button:hover,
+chip-shape.ytmusic-chip-cloud-chip-renderer:hover {
+    background: #e8e8e8 !important;
+    background-color: #e8e8e8 !important;
+    border-color: #d0d0d0 !important;
 }
 
 ytmusic-chip-cloud-chip-renderer[is-selected] a.ytmusic-chip-cloud-chip-renderer,
 ytmusic-chip-cloud-chip-renderer[enable-bauhaus-style][is-selected] a.ytmusic-chip-cloud-chip-renderer,
-ytmusic-chip-cloud-chip-renderer[chip-style="STYLE_PRIMARY"] a.ytmusic-chip-cloud-chip-renderer {
-    background: #e4d1c3 !important;
-    border-color: #c9b09f !important;
-    color: #1a1a1a !important;
+ytmusic-chip-cloud-chip-renderer[chip-style="STYLE_PRIMARY"] a.ytmusic-chip-cloud-chip-renderer,
+ytmusic-chip-cloud-chip-renderer chip-shape[selected] button,
+chip-shape[selected].ytmusic-chip-cloud-chip-renderer {
+    background: #0f0f0f !important;
+    background-color: #0f0f0f !important;
+    border-color: #0f0f0f !important;
+    color: #ffffff !important;
     font-weight: 600 !important;
 }
 
+ytmusic-chip-cloud-chip-renderer[is-selected] .text,
+ytmusic-chip-cloud-chip-renderer[is-selected] yt-formatted-string,
+ytmusic-chip-cloud-chip-renderer chip-shape[selected] .yt-chip-cloud-chip-renderer-text {
+    color: #ffffff !important;
+}
+
 ytmusic-chip-cloud-chip-renderer .text.style-scope.ytmusic-chip-cloud-chip-renderer,
-ytmusic-chip-cloud-chip-renderer yt-formatted-string {
+ytmusic-chip-cloud-chip-renderer yt-formatted-string,
+ytmusic-chip-cloud-chip-renderer chip-shape .yt-chip-cloud-chip-renderer-text {
     color: var(--ytm-content) !important;
 }
 
